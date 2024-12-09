@@ -1,0 +1,10 @@
+.header {
+  background-color: #f8d030;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo {
+  width: 30vw; /* Ajusta el tamaño del logo para hacerlo adaptativo */
+  height: auto;
+}

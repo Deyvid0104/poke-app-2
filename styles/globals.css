@@ -1,0 +1,20 @@
+/* :root {
+
+} */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  position: relative;
+  min-height: 100vh; /* Asegúrate de que el body ocupe al menos la altura de la ventana */
+  margin: 0; /* Elimina el margen por defecto */
+}
+
+main {
+  padding-bottom: 60px; /* Asegúrate de que haya suficiente espacio para el footer */
+}

@@ -1,0 +1,58 @@
+/* .inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinear horizontalmente en el centro */
+    /* justify-content: center; /* Alinear verticalmente en el centro */
+    /* padding: 10px;
+    height: 110vh; Altura completa de la ventana para centrar verticalmente */
+
+    /* h1{
+        color: #3b4cca;
+        font-size: 50px;
+        /* font-family: 'Press Start 2P', cursive;   aplicación de fuente */
+        /* &:hover {
+            color: #f8d030;
+        }
+    } 
+}*/
+
+.inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinear horizontalmente en el centro */
+    justify-content: center; /* Alinear verticalmente en el centro */
+    padding: 10px;
+    /* height: 110vh; Altura completa de la ventana para centrar verticalmente */
+}
+
+.titulo {
+    color: #3b4cca;
+    font-size: 50px;
+
+    &:hover {
+        color: #f8d030;
+    }
+}
+
+.cargando{
+    display: flex;               /* Usar flexbox para centrar */
+    flex-direction: column;      /* Alinear los elementos en columna */
+    justify-content: center;     /* Centrar verticalmente */
+    align-items: center;         /* Centrar horizontalmente */
+    height: 100vh;              /* Tomar toda la altura de la ventana */
+    /* background-color: #f0f0f0;  Fondo opcional, puedes cambiarlo */
+
+    .titulo {
+        color: #3b4cca;
+        font-size: 50px;
+    }
+}
+
+.card {
+    display: flex;                /* Usar flexbox para centrar */
+    flex-direction: column;       /* Organizar elementos en columna */
+    justify-content: flex-start;  /* Alinear elementos al inicio (arriba) */
+    align-items: center;          /* Centrar horizontalmente */
+    height: 100%;                 /* Asegúrate de que la tarjeta ocupe toda la altura disponible */
+    padding: 20px;               /* Espaciado interno para la tarjeta */
+}

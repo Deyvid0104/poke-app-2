@@ -1,0 +1,42 @@
+.pokemoncards {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que las cards se envuelvan en múltiples líneas */
+    justify-content: center; /* Centrar las cards horizontalmente */
+    gap: 20px; /* Espacio entre las cards */
+  }
+  
+  .card {
+    flex: 1 1 18%; /* Hacer que cada card ocupe un 30% del ancho del contenedor */
+    width: 15vw; /* Ancho máximo de cada card */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para las cards */
+    align-items: center;
+    justify-items: center;
+  }
+
+  .cargando{
+    display: flex;               /* Usar flexbox para centrar */
+    flex-direction: column;      /* Alinear los elementos en columna */
+    justify-content: center;     /* Centrar verticalmente */
+    align-items: center;         /* Centrar horizontalmente */
+    height: 100vh;              /* Tomar toda la altura de la ventana */
+    background-color: #f0f0f0;  /* Fondo opcional, puedes cambiarlo */
+
+    .titulo {
+      color: #3b4cca;
+      font-size: 50px;
+  }
+}
+  
+  /* Estilo responsivo */
+  
+  @media (max-width: 850px) {
+    .card {
+      flex: 1 1 45%; /* En pantallas más pequeñas, las cards ocupan un 45% */
+    }
+  }
+  
+  @media (max-width: 550px) {
+    .card {
+      flex: 1 1 100%; /* En pantallas muy pequeñas, las cards ocupan el 100% */
+    }
+  }

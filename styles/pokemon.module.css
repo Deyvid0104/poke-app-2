@@ -1,0 +1,111 @@
+/* Cards Pokemons */
+.card {
+    display: flex;                /* Usar flexbox para centrar */
+    flex-direction: column;       /* Organizar elementos en columna */
+    justify-content: flex-start;  /* Alinear elementos al inicio (arriba) */
+    align-items: center;          /* Centrar horizontalmente */
+    height: 100%;                 /* Asegúrate de que la tarjeta ocupe toda la altura disponible */
+    padding: 10px;               /* Espaciado interno para la tarjeta */
+    /* &:hover {
+        transform: scale(1.10); /* Efecto de aumento al pasar el mouse */
+        /* transition: background-color 0.3s ease, transform 0.2s ease; Transiciones suaves */
+        /* box-shadow: 0 0 0 2px rgba(71, 71, 71, 0.5); Sombra al enfocar */
+    
+}
+
+.nombre{
+    text-align: center;
+    justify-items: center;
+    color: #3b4cca;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    /* font-size: clam(1rem 1.3rem 1.5rem); */
+
+    &:hover {
+        color: #f8d030;
+        font-weight: bold;
+    }
+}
+
+.atributo{
+    text-align: left;            /* Alinear el texto a la izquierda */
+    &:hover{
+        font-weight: bold;
+    }
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.boton {
+    background-color: #3b4cca; /* Color de fondo azul */
+    color: #ffffff; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-top: 20px;           /* Añadir margen superior para mover el botón hacia abajo */
+    padding: 10px 20px; /* Espaciado interno (padding) */
+    font-size: 16px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+    text-align: center; /* Centrar el texto */
+
+    &:hover {
+        background-color: #e6b800; /* Color de fondo al pasar el mouse */
+        transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+    }
+
+    &:focus {
+        outline: none; /* Sin contorno al enfocar */
+        box-shadow: 0 0 0 2px rgba(255, 204, 0, 0.5); /* Sombra al enfocar */
+    }
+}
+
+
+/* Estilo general para la ventana modal */
+.modal-content {
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+}
+
+/* Título del modal */
+.modal-header {
+    background-color: #3b4cca; /* Color de fondo del encabezado */
+    color: white; /* Color del texto */
+    font-weight: bold; /* Negrita */
+}
+
+/* Cuerpo del modal */
+.modal-body {
+    background-color: #f8f8f8; /* Color de fondo del cuerpo */
+    color: #333; /* Color del texto */
+}
+
+/* Botones del modal */
+.modal-footer {
+    background-color: #f8f8f8; /* Color de fondo del pie del modal */
+
+    .btn {
+        border-radius: 5px; /* Bordes redondeados para los botones */
+        
+        &:hover {
+            background-color: #e6b800; /* Color de fondo al pasar el mouse */
+            color: white; /* Color del texto al pasar el mouse */
+        }
+    }
+}
+/* 
+.modal-footer .btn {
+    border-radius: 5px; /* Bordes redondeados para los botones */
+
+   
+/* } */
+
+/* Efecto de hover para el botón de cerrar */
+/* .modal-footer .btn:hover {
+    background-color: #e6b800; /* Color de fondo al pasar el mouse */
+    /* color: white;  Color del texto al pasar el mouse 
+}  */ 
