@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React, { useEffect, useState } from "react"; // Asegúrate de importar React
 import { useRouter } from "next/navigation";
 import PokeModal from "@/componentes/Modal";
@@ -33,6 +33,15 @@ export default function PokemonDetail({ params }) {
   }, [id]);
 
   const { gen } = React.use(params); // Desenvuelve también gen aquí
+  const handlePrevious = () => {
+    const previousId = Math.max(1, pokemon.id - 1); // Asegúrate de no ir por debajo de 1
+    router.push(`/pokemon/${gen}/${previousId}`); // Navega al Pokémon anterior
+  };
+
+  const handleNext = () => {
+    const nextId = pokemon.id + 1; // Asumiendo que los IDs son consecutivos
+    router.push(`/pokemon/${gen}/${nextId}`); // Navega al siguiente Pokémon
+  };
 
   const handleClose = () => {
     router.push(`/pokemon/${gen}`); // Cierra el modal y regresa a la lista
@@ -42,18 +51,23 @@ export default function PokemonDetail({ params }) {
     <>
       {pokemon && (
         <PokeModal
+          // show={true} // Siempre se muestra el modal
+          // handlePrevious={handlePrevious}
+          // handleNext={handleNext}
+          // handleClose={handleClose}
+          // pokemon={pokemon}
           show={true} // Siempre se muestra el modal
           handleClose={handleClose}
           pokemon={pokemon}
+          onPrevious={handlePrevious}
+          onNext={handleNext}
         />
       )}
     </>
   );
 }
 
-
 ////////////////////////////////////////////
-
 
 // 'use client';
 // import React, { useEffect, useState } from "react"; // Asegúrate de importar React
@@ -107,7 +121,6 @@ export default function PokemonDetail({ params }) {
 // }
 
 ///////////////////////////////////////////////////7
-
 
 // "use client";
 // import { useRouter, useSearchParams } from "next/navigation";

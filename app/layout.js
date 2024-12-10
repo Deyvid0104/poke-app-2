@@ -6,6 +6,9 @@ import Footer from "@/componentes/Footer";
 import Navegacion from "@/componentes/Nav";
 import  "bootstrap/dist/css/bootstrap.min.css";
 import AddBootstrap from "./AddBootstrap";
+// import { LanguageProvider } from "@/context/LanguageContext"; // Asegúrate de importar el contexto
+import { getDictionary } from "@/componentes/Diccionario";
+// import { Icon } from "@mui/material";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,12 +26,15 @@ export const metadata = {
   description: "En esta pagina vamos a encontrar una poke API que nos permitira buscar y mostrar los datos de los pokemones",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children, language }) {
+  const dictionary = getDictionary(language); // Obtener el diccionario según el idioma
+
   return (
+    // <LanguageProvider>
     <html lang="es">
-      {/* <head>
+      <head>
         <link rel="icon" href="/icono1.png" type="image/x-icon" />
-      </head> */}
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Header/>
         <AddBootstrap/>
@@ -37,5 +43,6 @@ export default function RootLayout({ children }) {
         <Footer/>
       </body>
     </html>
+    // </LanguageProvider>
   );
 }

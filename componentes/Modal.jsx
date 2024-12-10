@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button, Modal } from 'react-bootstrap';
-// import styles from '@/styles/pokemon.module.css';
 
 const PokeModal = ({ show, handleClose, pokemon }) => {
     if (!pokemon) return null; // Asegúrate de que haya un Pokémon para mostrar
@@ -16,9 +15,17 @@ const PokeModal = ({ show, handleClose, pokemon }) => {
                 <p>HP: {pokemon.hp}</p>
                 <p>Ataque: {pokemon.ataque}</p>
                 <p>Defensa: {pokemon.defensa}</p>
+                {/* <link rel="stylesheet" href="/" > Siguiente </link> */}
+
             </Modal.Body>
             <Modal.Footer>
                 <link rel="stylesheet" href="/" />
+                <Button variant="secondary" onClick={handleClose}>
+                    siguiente
+                </Button>
+                <Button variant="secondary" onClick={handleClose}>
+                    Anterior
+                </Button>
                 <Button variant="secondary" onClick={handleClose}>
                     Cerrar
                 </Button>

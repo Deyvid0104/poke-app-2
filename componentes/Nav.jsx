@@ -31,6 +31,13 @@ const Navegacion = () => {
           <Nav.Link href="/pokemon/gen2" className={styles.gen}>{dictionary.gen2}</Nav.Link>
           <Nav.Link href="/pokemon/gen3" className={styles.gen}>{dictionary.gen3}</Nav.Link>
         </Nav>
+        {/* Defensa */}
+        <Nav className="me-auto">
+        <Nav.Link href="/" className={styles.nav}>Defensa</Nav.Link>
+          <Nav.Link href="/gen1" className={styles.gen}>{dictionary.gen1}</Nav.Link>
+          <Nav.Link href="/gen2" className={styles.gen}>{dictionary.gen2}</Nav.Link>
+          <Nav.Link href="/gen3" className={styles.gen}>{dictionary.gen3}</Nav.Link>
+        </Nav>
         <div className={styles.languageButtons}>
           <button onClick={() => onLanguageChange('es')}>
             <Image src="/es.png" alt="Español" width={30} height={30} />
