@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Modal } from 'react-bootstrap';
-import styles from '@/styles/pokemon.module.css';
+// import styles from '@/styles/pokemon.module.css';
 
 const PokeModal = ({ show, handleClose, pokemon }) => {
     if (!pokemon) return null; // Asegúrate de que haya un Pokémon para mostrar

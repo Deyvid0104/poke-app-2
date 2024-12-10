@@ -7,7 +7,8 @@ const Diccionario = {
     gen1: "1ra Generación",
     gen2: "2da Generación",
     gen3: "3ra Generación",
-    btn: "Saber más",
+    btnSaberMas: "Saber más",
+    btnCerrar: "Cerrar",
     ataque: "Ataque",
     defensa: "Defensa",
     // Agrega más traducciones en español aquí
@@ -20,7 +21,8 @@ const Diccionario = {
     gen1: "1st Generation",
     gen2: "2nd Generation",
     gen3: "3rd Generation",
-    btn: "Learn more",
+    btnSaberMas: "Learn more",
+    btnCerrar: "Close",
     ataque: "Attack",
     defensa: "Defense",
     // Agrega más traducciones en inglés aquí
@@ -33,7 +35,8 @@ const Diccionario = {
     gen1: "1ère Génération",
     gen2: "2ème Génération",
     gen3: "3ème Génération",
-    btn: "En savoir plus",
+    btnSaberMas: "En savoir plus",
+    btnCerrar: "Fermer",
     ataque: "Attaque",
     defensa: "Défense",
     // Agrega más traducciones en francés aquí

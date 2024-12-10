@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Button, Card } from "react-bootstrap";
 import { useRouter } from "next/navigation"; // Hook para redirigir rutas dinámicas
-import styles from "../styles/pokemon.module.css";
+import styles from "@/styles/pokemon.module.css";
 
 export const Pokemon = ({ id, generation }) => {
   const [pokemon, setPokemon] = useState(null);

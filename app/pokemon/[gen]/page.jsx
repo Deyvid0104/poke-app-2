@@ -5,10 +5,7 @@ import Cargando from '@/componentes/Cargando';
 import styles from '@/styles/gen.module.css';
 
 const GenPage = ({ params }) => {
-  // const { gen } = params; // Obtén la generación de los parámetros
-
   const gen = React.use(params).gen; // Desenvuelve los parámetros
-
 
   const [pokemons, setPokemons] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -31,9 +28,9 @@ const GenPage = ({ params }) => {
         startId = 252;
         endId = 386;
       } else {
-        setError(<link rel="stylesheet" href="/" />);
+        setError('Generación no válida.');
         setLoading(false);
-        return ;
+        return;
       }
 
       // Obtener 10 IDs únicos
