@@ -5,11 +5,14 @@ import { Pokemon } from "@/componentes/Pokemon";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "@/styles/contenedor.module.css";
 import Cargando from "@/componentes/Cargando";
+import { getDictionary } from "@/componentes/Diccionario"; // Asegúrate de importar el diccionario
 
 export default function Home() {
-  const [randomPokemon, setRandomPokemon] = useState(null);
+  const [pokemon, setRandomPokemon] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [language, setLanguage] = useState('es'); // Estado para el idioma
+  const dictionary = getDictionary(language); // Obtener el diccionario según el idioma
 
   useEffect(() => {
     const fetchRandomPokemon = async () => {
@@ -45,7 +48,7 @@ export default function Home() {
     <>
       <div>
         <div className={styles.inicio}>
-          <h1 className={styles.titulo}>Pokémon Aleatorio</h1>
+          <h1 className={styles.titulo}>{dictionary.title}</h1>
           {loading && <Cargando/>}
           {error && <div>Error: {error}</div>}
           <Pokemon id={Math.floor(Math.random() * 151) + 1} generation="gen1" />

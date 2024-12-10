@@ -1,22 +1,35 @@
 'use client'
-import React from "react";
+import React, { useState } from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import styles from "@/styles/nav.module.css";
 import Image from "next/image";
 // import Link from 'next/link';
+import { getDictionary } from "@/componentes/Diccionario"; // Asegúrate de importar el diccionario
 
-const Navegacion = ({ onGenerationClick }) => {
+const Navegacion = () => {
+  // const Navegacion = ({ onLanguageChange }) => {
+  const [language, setLanguage] = useState('es'); // Estado para el idioma
+
+  const onLanguageChange = (lang) => {
+    setLanguage(lang);
+    // onLanguageChange(lang); // Llama a la función pasada como prop
+  };
+
+  const dictionary = getDictionary(language); // Obtener el diccionario según el idioma
+
+
+// const Navegacion = ({ onGenerationClick }) => {
   return (
     <Navbar bg="light" expand="lg">
       <Navbar.Brand href="/" className={styles.nav}>
-        Inicio
+       {dictionary.home} {/* Usar el título del diccionario */}
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
-          <Nav.Link href="/pokemon/gen1" className={styles.gen}>1ª Generación</Nav.Link>
-          <Nav.Link href="/pokemon/gen2" className={styles.gen}>2ª Generación</Nav.Link>
-          <Nav.Link href="/pokemon/gen3" className={styles.gen}>3ª Generación</Nav.Link>
+          <Nav.Link href="/pokemon/gen1" className={styles.gen}>{dictionary.gen1}</Nav.Link>
+          <Nav.Link href="/pokemon/gen2" className={styles.gen}>{dictionary.gen2}</Nav.Link>
+          <Nav.Link href="/pokemon/gen3" className={styles.gen}>{dictionary.gen3}</Nav.Link>
         </Nav>
         <div className={styles.languageButtons}>
           <button onClick={() => onLanguageChange('es')}>
